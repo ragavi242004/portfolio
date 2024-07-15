@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projects</title>
+    <!-- Link to Font Awesome CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <!-- Link to your custom stylesheet -->
+    <link rel="stylesheet" href="stylesheet.css">
+    <style>
+        body {
+            
+            background-size: cover;
+            color: #000; /* Black color */
+            font-size: 18px; /* Set font size */
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            
+        }
+
+        .project {
+            margin-top: 20px;
+            font-size: 45px;
+            margin-right: -250px;
+           
+        }
+
+        .project-title {
+            color: #000; /* Black color */
+            font-size: 25px;
+            margin-bottom: 20px; /* Added margin-bottom */
+            display: flex;
+            justify-content: space-between; /* Align button to the right */
+            align-items: center; /* Center-align vertically */
+            margin-right: -100px; /* Move project titles to the left */
+        }
+
+        .project-description {
+            display: none; /* Hide project descriptions by default */
+            margin-bottom: 0px;
+            font-size: 25px;
+            max-width: 700px;
+
+            margin-right: -100px;
+        }
+
+        .about-text {
+            color: #003366; /* Dark blue color */
+            font-size: 40px;
+            margin-top: -130px;
+            margin-right: -250px;
+            text-align: center; /* Center align the projects heading */
+        }
+
+        .view-button {
+            color: black; /* Dark blue color */
+            font-size: 24px;
+            cursor: pointer;
+            margin-right:25px;
+            
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <div class="spacer"></div>
+        <nav class="navbar">
+            <div class="dropdown">
+                <button class="dropbtn">
+                    <i class="fas fa-bars"></i> <!-- Menu icon -->
+                </button>
+                <div class="dropdown-content">
+                    <a href="index.html">HOME</a>
+                    <a href="ABOUT.html">ABOUT</a>
+                    <a href="EDUCATION.html">EDUCATION</a>
+                    <a href="INTERNSHIP.html">INTERNSHIP</a>
+                    <a href="SKILLS.html">SKILLS</a>
+                    <a href="PROJECTS.html">PROJECTS</a>
+                    <a href="CERTIFICATIONS.html">CERTIFICATIONS</a>
+                    <a href="CONTACT.html">CONTACT</a>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <section class="home">
+        <div class="home-content">
+            <div class="container">
+                <h1 class="about-text">PROJECTS</h1>
+                <div class="project">
+                    <h3 class="project-title">Skin Disease Classification
+                        <span class="view-button" onclick="toggleDescription(1)">&#9660;</span></h3>
+                    <p class="project-description">Utilized a convolutional neural network (CNN) architecture with the Sequential API in Keras to
+                        effectively capture intricate patterns in dermatology images, enhancing the accuracy of skin
+                        disease classification.<br>
+                        Achieved high performance on the classification task, validated by rigorous testing on a separate
+                        dataset,thereby demonstrating the model's potential in aiding early diagnosis and treatment
+                        recommendations for various skin conditions.
+                        .</p>
+                </div>
+                <div class="project">
+                    <h3 class="project-title">Plant Disease Detection System
+                        <span class="view-button" onclick="toggleDescription(2)">&#9660;</span></h3>
+                    <p class="project-description">Integrated pre-trained Convolutional Neural Networks (CNNs) for image classification tasks,
+                        specifically tailored for analyzing and classifying plant diseases based on visual features
+                        extracted from images.<br>
+                        Developed a user-friendly interface enabling users to upload plant images for automated disease
+                        diagnosis.
+                        </p>
+                </div>
+                <div class="project">
+                    <h3 class="project-title">plagiarism checker<span class="view-button" onclick="toggleDescription(3)">&#9660;</span></h3>
+                    <p class="project-description">Designed a robust plagiarism checker tool using Python and Natural Language Processing (NLP)
+                        techniques to compare input text against an extensive database of documents.<br>
+                        Utilized advanced algorithms, including cosine similarity and fingerprinting, to detect and
+                        highlight matching or similar phrases.<br>
+
+                        Key features include an intuitive interface built with Flask for easy text submission, real-time
+                        comparison results, and user-friendly reports that facilitate quick and accurate evaluation of
+                        text originality.
+                        .</p>
+                </div>
+                <div class="project">
+                    <h3 class="project-title">Comprehensive Job Market Analysis Dashboard
+<span class="view-button" onclick="toggleDescription(4)">&#9660;</span></h3>
+                    <p class="project-description">Imported and integrated job market data from various sources using Power BI’s data connectors.
+                        Cleaned and transformed the data with Power Query Editor for accuracy and consistency.<br>
+                        Created interactive dashboards with visualizations like bar charts, line graphs, pie charts, and
+                        maps. Displayed key metrics and implemented slicers and filters for dynamic exploration by
+                        industry, location, job type, and company size.
+                        </p>
+                </div>
+                <div class="project">
+                    <h3 class="project-title">Automated Electricity Bill Management System with MySQL Integration
+                        <span class="view-button" onclick="toggleDescription(5)">&#9660;</span></h3>
+                    <p class="project-description">Utilized MySQL to design and implement a relational database for storing consumer records,
+                        billing details, payment history, and consumption data.<br>
+                        Implemented automated billing processes to calculate electricity bills based on consumption
+                        data.
+                        </p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <script>
+        function toggleDescription(projectNum) {
+            var description = document.querySelectorAll(".project-description")[projectNum - 1];
+            if (description.style.display === "none") {
+                description.style.display = "block";
+            } else {
+                description.style.display = "none";
+            }
+        }
+    </script>
+</body>
+</html>
