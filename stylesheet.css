@@ -176,11 +176,6 @@ body {
     transition: color 0.3s; /* Add transition for smooth color change */
 }
 
-/* Instagram Hover Styles */
-.social-icons a.instagram:hover {
-    color: #bc2a8d; /* Original Instagram color */
-}
-
 /* WhatsApp Hover Styles */
 .social-icons a.whatsapp:hover {
     color: #25D366; /* WhatsApp green color */
